@@ -1,0 +1,43 @@
+testCaseName: Login Test Example
+steps:
+  - action: open url
+    url: http://saucedemo.com
+    critical: true
+
+  - action: input_text
+    selectorType: id
+    selector: user-name
+    value: "standard_user"
+    critical: true
+    
+  - action: input text
+    selectorType: id
+    selector: password
+    value: "secret_sauce"
+    
+ # - action: click
+  #  selectorType: id
+   # selector: password
+    
+  #- action: input text
+   # selectorType: id
+   # selector: password
+   # value: password123
+  #- action: wait
+ #   value: 5000
+  - action: verify_text
+    selectorType: class
+    selector: login_logo
+    expected: Sag Labs
+
+  - action: click
+    selectorType: id
+    selector: login-button
+    critical: true
+    
+
+    
+
+    
+  - action: end_the_test
+    endOfTest: true
